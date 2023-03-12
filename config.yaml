@@ -1,0 +1,34 @@
+welcome:
+    test:
+        text: "welcome to the test channel"
+        blocks:
+          - type: header
+            text:
+                type: plain_text
+                text: welcome to the test channel
+          - type: section
+            text:
+                type: mrkdwn
+                text: |-
+                    here's all the cool stuff
+                    - a
+                    - b
+                    - c
+
+autoresponse:
+  - pattern: "pull request"
+    delay: 5
+    message:
+        blocks:
+          - type: section
+            text:
+                type: plain_text
+                text: please check the documentation...
+          - type: section
+            text:
+                type: plain_text
+                text: please check the contribution guidelines...
+  - pattern: "superteam"
+    delay: 10
+    message:
+        text: "thank you for reaching out ..."
